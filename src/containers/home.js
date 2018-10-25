@@ -20,8 +20,7 @@ export default class Home extends Component {
     chestPain: { active: false },
   };
 
-  handleClick = (e, { title }) =>
-    console.log(title) || this.setState({ active: title });
+  handleClick = (e, { title }) => this.setState({ active: title });
   handleCheckBox = (e, { name }) => {
     this.setState({
       [name]: { ...this.state[name], active: !this.state[name].active }
@@ -47,8 +46,6 @@ export default class Home extends Component {
       recentWeightGain,
       recentWeightLost,
     } = this.state;
-    console.log(active, agreement);
-    console.log(this.state);
     return (
       <div className="form-wrapper">
         <div>
