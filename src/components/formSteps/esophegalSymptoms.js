@@ -4,7 +4,8 @@ import { Checkbox, Button } from "semantic-ui-react";
 function EsophegalSymptoms({
   state: { frequentHeartburn, chestPain},
   handleClick,
-  handleCheckBox
+  handleCheckBox,
+  handleSave
 }) {
   return (
     <div className="form-section-wrapper">
@@ -30,10 +31,10 @@ function EsophegalSymptoms({
         <div style={{marginTop: 100}}>
           <Button
             size="huge"
-            onClick={e => handleClick(e, { title: "Head Symptoms" })}
+            onClick={handleSave}
             disabled={!frequentHeartburn.active && !chestPain.active}
           >
-            Next
+            Save
           </Button>
         </div>
       </div>

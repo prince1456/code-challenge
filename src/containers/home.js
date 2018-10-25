@@ -31,6 +31,15 @@ export default class Home extends Component {
     this.setState({ [name]: { ...this.state[name], condition: value } });
     // this.setState({ value })
   };
+  handleSubmit = (e) => {
+    e.preventDefault()
+    let params = {}
+    Object.keys(this.state).map((key) => {
+      if(this.state[key].active === true) return params[key] = this.state[key]
+    })
+    console.table(params)
+    
+  }
   render() {
     const {
       active,
@@ -46,6 +55,7 @@ export default class Home extends Component {
           <ul>
             <li><Link to='/gallery'>Gallery</Link></li>
             <li><Link to='/'>Home</Link></li>
+            <li><Link to='/second-gallery'>Second Gallery</Link></li>
           </ul>
         </div>
         <div>
@@ -76,7 +86,7 @@ export default class Home extends Component {
             />
             <Step
               active={active === "Esophegal symptoms"}
-              icon="esophegalSymptoms"
+              icon="stethoscope"
               link
               onClick={this.handleClick}
               title="Esophegal symptoms"
@@ -115,6 +125,7 @@ export default class Home extends Component {
                   handleCheckBox={this.handleCheckBox}
                   handleChaneRadio={this.handleChaneRadio}
                   state={this.state}
+                  handleSave={this.handleSubmit}
                 />
               )}
             </form>

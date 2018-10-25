@@ -1,9 +1,8 @@
 const images = [
-    {url: require('../assets/gallery/18.gif')},
+    {url: require('../assets/gallery/2.gif')},
     {url: require('../assets/gallery/19.gif')},
     {url: require('../assets/gallery/7.gif')},
     {url: require('../assets/gallery/1.gif')},
-    {url: require('../assets/gallery/2.gif')},
     {url: require('../assets/gallery/3.gif')},
     {url: require('../assets/gallery/4.gif')},
     {url: require('../assets/gallery/5.gif')},

@@ -1,17 +1,9 @@
 import React, { Component } from 'react'
 import images from '../constant/constant';
 import { Link } from 'react-router-dom';
-import { Icon } from "semantic-ui-react";
-
 import './styles.scss';
 
-export default class Gallery extends Component{
-    state = {
-        show: false
-    }
-    componentDidMount(){
-        setTimeout(() => this.setState({show: true}), 3000)
-    }
+export default class SecondGallery extends Component{
     getImageWidth = (imgSrc) => {
         let newImg = new Image();
         newImg.src = imgSrc;
@@ -42,11 +34,6 @@ export default class Gallery extends Component{
     //                 // 'gridRow': `span ${newImg.height / 5 === 0 ? 1 : Math.random(newImg.height / 5)}`
     // }
     render(){
-        if(!this.state.show) {
-            return(
-                <div className="loader"><Icon loading name='spinner' size="massive"/></div>
-            )
-        }
         return (
             
                 <div className='container'>

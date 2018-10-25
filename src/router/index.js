@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Home, Gallery } from '../containers'
+import { Home, Gallery, SecondGallery } from '../containers'
 
 const App  = () => {
     return (
@@ -8,6 +8,7 @@ const App  = () => {
       <div>
         <Route exact path="/" component={Home} />
         <Route path="/gallery" component={Gallery} />
+        <Route path="/second-gallery" component={SecondGallery} />
       </div>
     </Router>
     )
