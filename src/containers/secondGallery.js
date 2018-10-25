@@ -4,29 +4,29 @@ import { Link } from 'react-router-dom';
 import './styles.scss';
 
 export default class SecondGallery extends Component{
-    getImageWidth = (imgSrc) => {
+   
+      getImageClass = (imgSrc) => {
         let newImg = new Image();
         newImg.src = imgSrc;
-        console.log(window.innerWidth, newImg.width, window.innerWidth / newImg.width)
-        return 1200 / newImg.width < 4 ?  'horizontal' : ''
-        // return newImg.width > 250 ? 'w2' : 'w1' 
-      }
-      getImageHeights = (imgSrc) => {
-        let newImg = new Image();
-        newImg.src = imgSrc;
+        const height =  newImg.height;
+        const width = newImg.width;
+        if(height === width ) {
+            return 'big'
+        } else if(height > width) {
+            return 'vertic'
+        } else if(width > height ) {
+            return "horizon"
+        } else {
+            return ''
+        }
         // console.log('height', 200, newImg.height, 200 / newImg.height)
-        console.log("CSS", `vertical-${Math.round(newImg.height/200)}`, newImg.height ,imgSrc)
-        let vertical = Math.round(newImg.height/200) > 10 ? 10 : Math.round(newImg.height/200);
-        return `vertical-${vertical}`
+        // console.log("CSS", `vertical-${Math.round(newImg.height/200)}`, newImg.height ,imgSrc)
+        // let vertical = Math.round(newImg.height/200) > 10 ? 10 : Math.round(newImg.height/200);
+        // return `vertical-${vertical}`
         // newImg.height > 500 ? `vertical-3` : 500 / newImg.width >= 1 ?  `vertical` : '';
         // return newImg.height > 250 ? 'h2' : 'h1'
       }
-      getImageHeight = (imgSrc) => {
-        let newImg = new Image();
-        newImg.src = imgSrc;
-        return newImg.height
-      }
-
+      
     // getStyle = (img, major) => {
     //     let newImg = new Image();
     //         newImg.src = img; 
@@ -36,7 +36,7 @@ export default class SecondGallery extends Component{
     render(){
         return (
             
-                <div className='container'>
+                <div className=''>
                 <div>
                     <ul>
                         <li><Link to='/gallery'>Gallery</Link></li>
@@ -44,11 +44,11 @@ export default class SecondGallery extends Component{
                         <li><Link to='/second-gallery'>Second Gallery</Link></li>
                     </ul>
                     </div>
-                    <div className='gallery'>
+                    <div className='second-gallery'>
                         {images.map((image, i) => {
 
                             return (
-                                <div key={i} className={`gallery_item ${this.getImageWidth(image.url)} ${this.getImageHeights(image.url)} `}>
+                                <div key={i} className={`${this.getImageClass(image.url)}`}>
                                 {/* //  style={{gridColumn: this.getStyle(image.url, 'width'), gridRow: this.getStyle(image.url, 'height')}}> */}
                                   <img  alt="ss" src={image.url}/>
                                 </div>
