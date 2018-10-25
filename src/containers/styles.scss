@@ -1,11 +1,15 @@
 
+p {
+    font-family: 'Roboto', sans-serif;
+}
 .container {
-    margin: auto;
-    max-width: 750px;    
+    margin: 0px 50px;
+    // max-width: 750px;    
 }
 
 .gallery{
-
+    margin: auto;
+    max-width: 750px;    
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -19,7 +23,7 @@
   }
 
   .gallery_item {
-    // width: 100%;
+    width: 100%;
     height: 100%;
   }
 
@@ -71,48 +75,63 @@
   }
 
   .form-wrapper{
-    
+    width: 95%;
+    margin: 0 auto;
+  
   }
 
+  ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    list-style: none;
 
+    li{
+        margin: 10px
+    }
+}
+  .form-section-wrapper {
+      margin: 50px;
+      p{
+          font-size: 20px;
+          line-height: 22px;
+          letter-spacing: 100;
+          
+      }
+      .note {
+          font-weight: 600
+      }
+      .checkbox-wrapper {
+        display: flex;
+        flex-direction: column;
+        div:nth-child(1) {
+            padding-bottom: 30px
+        }
+        .ui.checkbox .box:after, .ui.checkbox label:after {
+            font-size: 25px;
+            top: 8px;
+            width: 30px;
+            height: 30px;
+        }
+        .ui.checkbox .box:before, .ui.checkbox label:before {
+            width: 30px;
+            height: 30px;
+        }
+        .ui.checkbox input[type=checkbox], .ui.checkbox input[type=radio] {
+            width: 30px;
+            height: 30px;
+        }
+        .ui.checkbox .box, .ui.checkbox label {
+            padding-left: 2.2em;
+            font-size: 20px;
+            padding: 7px 40px;
+        }
+        .ui.radio.checkbox .box:before, .ui.radio.checkbox label:before {
+            content: '';
+            top: 8px;
+        }
+        .radio-form-wrapper { 
 
-
-
-
-// .gallery{
-//     display: grid;
-//     grid-template-columns: 1fr 1fr 1fr 1fr;
-    
-//     grid-auto-flow: dense;
-//     grid-gap: 10px;
-//     overflow: hidden;
-//     img {
-//         width: 100% !important;
-//         height: auto !important;
-//     }
-//     .w2 {
-        
-//     }
-//     .h2 {
-        
-//     }
-// }
-//   @media (max-width: 800px) {
-//     .gallery {
-//         display: grid;
-//         grid-auto-flow: dense;
-//         grid-template-columns: 1fr 1fr;
-//         .w2 {
-            
-//         }
-//         .h2 {
-            
-//         }
-//     }
-//   }
-//   @media (max-width: 400px) {
-//     .gallery {
-//         display: grid;
-//         grid-template-columns: 1fr;
-//     }
-//   }
+        }
+    }
+  };

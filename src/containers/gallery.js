@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import images from '../constant/constant';
+import { Link } from 'react-router-dom';
 import './styles.scss';
 
 export default class Gallery extends Component{
@@ -36,6 +37,12 @@ export default class Gallery extends Component{
         return (
             
                 <div className='container'>
+                <div>
+                    <ul>
+                        <li><Link to='/gallery'>Gallery</Link></li>
+                        <li><Link to='/'>Home</Link></li>
+                    </ul>
+                    </div>
                     <div className='gallery'>
                         {images.map((image, i) => {
 
