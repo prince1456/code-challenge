@@ -27,7 +27,7 @@ function HeadSymptoms({
             onChange={handleCheckBox}
             checked={hearingLoss.active}
           />
-
+          {/* show the Rate hearing Radios if hearing los is active */}
           {hearingLoss.active && (
             <div className="radio-form-wrapper">
               <h2>Rate your hearing for your left ear</h2>
@@ -60,6 +60,7 @@ function HeadSymptoms({
               </Form.Field>
             </div>
           )}
+          {/* show the headache level  if the user have headache issue */}
            {frequentHeadaches.active && (
             <div className="radio-form-wrapper">
               <h2>Tell us more about your headaches</h2>
