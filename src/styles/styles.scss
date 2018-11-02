@@ -6,15 +6,20 @@ p {
     margin: 0px 50px;
     // max-width: 750px;    
 }
+// @@@@@@@@@@@@@@@@@@  first  solution started here @@@@@@@@@@@@@@@@@@@@
 
 .gallery{
     margin: auto;
     max-width: 750px;    
     margin: auto;
     display: grid;
+    // devide the gallery container to the two column
     grid-template-columns: 1fr 1fr;
+    // default value for each row to grows
     grid-auto-rows: 200px;
+    // adding gab between each column and row 
     grid-gap: 5px;
+    // fill the empty space with closest image which is fit in that empty space
     grid-auto-flow: dense;
     justify-content: center;
     align-content: center;
@@ -68,12 +73,12 @@ p {
     grid-row: auto / span 10;
 }
 
-  
+
   .big {
     grid-column: span 2;
     grid-row: span 2;
   }
-
+// @@@@@@@@@@@@@@@@ first gallery solution end here
   .form-wrapper{
     width: 95%;
     margin: 0 auto;
@@ -136,6 +141,7 @@ p {
     }
   };
 
+
 .loader{
     width: 100%;
     height: 100vh;
@@ -143,6 +149,8 @@ p {
     justify-content: center;
     align-items: center;
 }
+
+// second gallery start here
 
 
 .second-gallery{
@@ -177,3 +185,5 @@ p {
         height: 100%;
     }
 }
+
+// second gallery end here
